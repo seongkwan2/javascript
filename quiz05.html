@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	const cf = 2000;
+	let num = prompt(`구입할 커피 개수 입력`);
+	let num1;
+	if(num > 10){
+		num1 = (num - 10) * 1500 + 20000;
+		document.write(`금액 : ${num1}<br>`);
+	}else{
+		num1 = num * cf;
+		document.write(`금액 : ${num1}<br>`);
+	}
+	const usb = 5000;
+	num = prompt(`usb개수 입력`);
+	if(num >= 100){
+		num1 = (num * usb) * 0.88;
+	}else if(num >= 10){
+		num1 = (num * usb) * 0.9;
+	}else{
+		num1 = num * usb;
+	}
+	document.write(`필요한 금액 : ${num1}<br>`);
+	
+</script>
+</body>
+</html>

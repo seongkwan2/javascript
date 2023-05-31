@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+	+, -, *, /, %
+	
+	+=, -=,,,
+	
+	<, >=, == ,,, ===, !==
+	
+	- === : 값과 타입 모두 같으면 true
+	- !== : 값 또는 타입이 다르면 true
+	
+	||, &&, !
+	
+	++, --
+*/	
+	let num1 = 10, num2 = "10";
+	document.write((num1 == num2) + "<br>");	//값이 같아서 true
+	document.write((num1 === num2) + "<br>");	//값은 같으나 타입이 달라서 false
+	
+	const x = 5;
+	const y = 7;
+	
+	let result;
+	result = (x > y)? x : y; 	  //삼항연산자 x > y 가 참이면 x값이, 거짓이면 y값이 result에 들어감
+	document.write("큰 값 : " + result + "<br>");
+	
+	result = (x > y) ? x-y : y-x; //삼항연산자 x > y 가 참이면 x-y값이, 거짓이면 y-x값이 result에 들어감
+	document.write(`큰 값 - 작은 값 = ${result}<br>`);
+	
+</script>
+</body>
+</html>
+
+
+
+

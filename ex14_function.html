@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	/*
+	let fun = func();
+	
+	function func(){
+		console.log("화살표 함수");
+		return 100;
+	}
+	*/
+	
+	let func = () => {
+		console.log("화살표 함수");
+		return 100;
+	}
+	
+	document.write(func());
+	
+
+	const func01 = () => { 10 + 20;} //리턴을 하라는 명시가 없어서 리턴값이 없음
+	const func02 = () =>  10 + 20; // 바로 값을 리턴으로 돌려줌
+	const func03 = () => { return 10 + 20;}
+	document.write("<hr>");
+	document.write(func01() + "<br>");
+	document.write(func02() + "<br>");
+	document.write(func03() + "<br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	let num = 10;
+	let msg = "";	//String 이라는 의미
+	if(num % 2 === 0 ){
+		msg = "짝수<br>";
+	}else if( num % 2 !== 0){
+		msg = "홀수<br>";
+	}
+	document.write(msg);
+	
+	const userId = "aaa", userPwd = "aaa";
+	if( userId == "aaa"){
+		if(userPwd == "aaa"){
+			msg += "인증 통과!!!"	//+=를 사용함으로써 위에서 사용된 짝수도 재사용 된다.
+		}else{
+			msg += "존재하지 않는 아이디 입니다<br>"
+		}
+	}else{
+		msg += "존재하지 않는 아이디 입니다<br>"
+	}
+	document.write(msg);
+</script>
+</body>
+</html>

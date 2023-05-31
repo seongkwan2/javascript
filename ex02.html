@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let name = "홍길동";
+		
+		let age = prompt("나이 입력"); //사용자에게 입력받는 코드 자료형은 string
+		document.write("이름 : " + name +"<br>");
+		document.write(name + "님의 나이 : " + age + "<br>");
+		document.write(`${name}님의 나이 : ${age} <br>`);	//전체를 문자열로 묶어서
+														//변수사용시 ${}로 꺼내어 사용
+		
+		document.write(`만 나이 : ${age -1} 살 입니다`); 	//연산도 가능하다.
+														
+		console.log(`age : ${ typeof age}`);
+		
+		
+		let num = Number(age);	//Number = int
+		console.log(`num : ${ typeof num}`);
+		console.log(`num : ${typeof num.toString()}`);	//객체를 문자열로 변환
+		console.log(`num : ${typeof (num+"")}`);		//문자열과 결합
+		
+		document.write("<h1 align='center'>안녕하세요</h1>");
+		
+		
+		const n = "홍홍홍";		//Final 함수와 같이 상수(값 변경 불가능)
+		n = "김김김";				//값을 변경하려고 하니 console창에서 오류발생
+		console.log("n : " + n);
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+	function test01(){
+		let num = 100;
+		num = 200;
+		console.log("num : " + num);
+	}
+	test01();
+	console.log("num : " +num);
+*/
+
+
+	test02();
+	
+	function test02(){
+	var num2 = 100;
+	var num2 = "aaaa"; // var 함수는 재선언 가능, 생략도 가능
+	num2 = "bbb";
+	console.log("num2 : " + num2);	//실제로 어떤값이 남았는지 확인하기 위한 코드
+	}
+	
+	const n1 = 10;
+	const n2 = 20;
+	const sum = sumFunc(n1, n2);	//변수에 함수를 담을수 있다.
+	function sumFunc(num1, num2){
+		const s = num1 + num2;
+		return s;	//리턴되는 값은 sum으로 넘겨줌
+	}
+	document.write(`${n1} + ${n2} = ${sum}`);
+					//10  +  20  = 30
+	
+	function test03(){
+		const num = 95;
+		const txt = "안녕하세요";
+		const arr = [num, txt];
+		return arr;
+		// return num, txt; // 여러개를 return 하면 마지막것이 리턴
+	}
+	const result = test03();	//리턴된값을 result로 가져와서 사용
+	document.write("<hr>" + result);
+	document.write("<br>" + result[0]);
+	document.write("<br>" + result[1]);
+</script>
+</body>
+</html>

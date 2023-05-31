@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.img{width:100px; height: 100px;}
+</style>
+<script type="text/javascript">
+	const images = ["images/최근상품01.jpg", "images/최근상품02.jpg"];
+		//onload = 초기화목적 window.onload가 가장 먼저 실행됨
+	window.onload = () => {
+		const div = document.getElementById("text");
+		let msg = "";
+		for (let i = 0 ; i<images.length; i++){
+			msg += `<img src = "${images[i]}" class="img">`;
+		}
+		div.innerHTML = msg;
+	}
+</script>
+</head>
+<body>
+	<div id="text"></div>
+</body>
+</html>
