@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	const city = ['서울','부산','인천'];
+	const printArr = () =>{
+		for(let i=0; i<city.length; i++){
+			document.write(`배열 데이터 ${i} = ${city[i]}<br>`);
+		}
+	}
+	printArr();
+	city[3] = '대구';	/*내용 추가가 가능하다.*/
+	document.write(`<hr>${city}<br>`);
+	
+	const str = city.join("/");
+	document.write("str : "+str+"<br>");
+	document.write("str type : "+typeof str+"<br>");
+	document.write("city type : "+typeof city+"<br>");
+	
+	document.write("str.split : "+str.split("/")+"<br>");
+	document.write("str type : "+typeof sty.split("/")+"<br>");
+	
+	
+	
+</script>
+	
+</body>
+</html>

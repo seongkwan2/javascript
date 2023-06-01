@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	let kdata = ['서울','부산'];
+	document.write("기본 배열 : "+kdata+"<br>");
+	kdata.push("인천","세종");
+	document.write("push 배열 : "+kdata+"<br>");		//push,pop은 젤 마지막부분에서 적용
+	
+	kdata.pop();
+	document.write("pop 배열 : "+kdata+"<br>");
+	
+	kdata.unshift("111","222");
+	document.write("unshift 배열 : "+kdata+"<br>");
+	
+	kdata.shift();	
+	document.write("shift 배열 : "+kdata+"<br>");	//unshift, shift는 제일 앞쪽에 적용
+													//unshift는 추가, shift는 제거
+												
+	var d = kdata.concat("추가","데이터");	//변수를 지정해서 저장해야 한다.
+	document.write("concat 배열 : "+d+"<br>");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	const data = [111,222,333];
+	function printArr(item, index){
+		document.write(`배열 데이터 ${index} = ${item}<br>`);
+	}
+	
+	document.write(`===foreach===<br>`);
+	data.forEach((item,index)=>{;
+	document.write(`배열 데이터 ${index} = ${item}<br>`);
+	})
+	
+	document.write(`====<br>`);
+	//const data = [111,222,333];
+	const mapArr = (value) => {
+		return `<b style="color:red;">${value}</b>`;
+	}
+	const mapArr2 = data.map(
+			(value) => `<b style="color:blue;">${value}</b>`
+			);
+	const mapData = data.map(mapArr);		//for는 return불가능 map은 return가능
+	document.write(mapData);
+	document.write(mapData22);
+</script>
+</body>
+</html>
