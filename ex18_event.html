@@ -10,12 +10,15 @@
 	const images = ["images/최근상품01.jpg", "images/최근상품02.jpg"];
 		//onload = 초기화목적 window.onload가 가장 먼저 실행됨
 	window.onload = () => {
+			//변수 div에 text란 이름의 빈 div를 담음
 		const div = document.getElementById("text");
-		let msg = "";
+			
+		let msg = "";	//msg변수 초기화
 		for (let i = 0 ; i<images.length; i++){
 			msg += `<img src = "${images[i]}" class="img">`;
-		}
+		}									//class="img"는 CSS를 사용하기 위함
 		div.innerHTML = msg;
+		//div안에 그림이 모아져있는 msg를 품
 	}
 </script>
 </head>

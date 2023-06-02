@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	function test01(){
+		let num = 100;
+		num = 200;
+		console.log("num : "+num);
+	}
+	test01();
+	console.log("num : "+num);
+*/
+
+	function test02(){
+		var num2 = 100;
+		var num2 ="aaaa";
+		num2 = "bbbb";
+		console.log("n2 : "+num2);
+	}
+	test02();
+	//console.log("밖에 n2 : "+num2);
+	
+	const n1 = 10;
+	const n2 = 20;
+	const sum = sumFunc(n1, n2);
+
+	function sumFunc(num1, num2){
+		const s = num1 + num2;
+		return s;
+	}
+	document.write(`${n1}+${n2}=${sum}`);
+	
+	function test03(){
+		const num = 95;
+		const txt = "안녕하세요";
+		const arr = [num, txt];
+		return arr;
+	}
+	const result = test03();
+	document.write( "<hr>"+result );
+	document.write( "<br>"+result[0] );
+	document.write( "<br>"+result[1] );
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

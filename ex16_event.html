@@ -6,37 +6,37 @@
 </head>
 <body>
 <script type="text/javascript">
-	const myMousedown = () => {
+	const myMousedown = () => {//마우스를 누르고 있을때
 		document.getElementById("span").innerHTML = "마우스 DOWN";
 	}
-	const myMouseup = () => {
+	const myMouseup = () => {//마우스를 떼고 있을때
 		document.getElementById("span").innerHTML = "마우스 UP";
 	}
+	
 	let cnt = 0;
 	const myMousemove = () => {
-		cnt++;
+		cnt++;	//마우스를 움직일때마다 카운트가 1씩 올라감
 		document.getElementById("count1").innerHTML = cnt;
 	}
 	const myMouseover = () => {
-		cnt++;
+		cnt++;	//마우스가 해당 공간에 들어오면 카운트가 1씩 올라감
 		document.getElementById("count2").innerHTML = cnt;
 	}
 	const myMouseout = () => {
-		cnt++;
+		cnt++;	//마우스가 해당 공간에서 나가면 카운트가 1씩 올라감
 		document.getElementById("count2").innerHTML = "마우스 나감";
 	}
 </script>
-
+	<!-- onmousedown = 마우스를 누르고 있을때 / onmouseup = 마우스를 떼고 있을때-->
 <div onmousedown = "myMousedown()" onmouseup="myMouseup()">
 	<span id="span">이벤트 알아보기</span>
 </div>
-<hr>
+<hr><!-- myMousemove = 마우스를 움직일때 -->
 <div onmousemove="myMousemove()"
 				style="background: gray; width:100px; height:100px">
 		<span id="count1">0</span>
 </div>
 <hr>
-
 <div onmouseover="myMouseover()" onmouseout="myMouseout()"
 	style="background: gray; width:100px; height: 100px;">
 	<span id = "count2">0</span>

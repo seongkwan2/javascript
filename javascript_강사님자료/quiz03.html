@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+img { width: 100px; height: 100px; }
+.list { position: fixed; right: 30px;
+top: 10px; width: 100px; }
+.list_title { background: red; }
+</style>
+<script>
+window.onload=()=>{
+const imgArr = ["최근상품01.jpg", "최근상품02.jpg",
+"최근상품03.jpg", "최근상품04.jpg", "최근상품05.jpg",
+"최근상품06.jpg", "최근상품07.jpg", "최근상품08.jpg",
+]
+let table = document.createElement("table");
+table.border="1";
+let image="<tr>";
+for(let i=0; i < imgArr.length; i++){
+console.log(i);
+image += `<td><img src="images/${imgArr[i]}" onclick="display('${imgArr[i]}')"></td>`;
+if(i == imgArr.length / 2 - 1){
+image += "</tr><tr>"
+}
+}
+image += "</tr>";
+table.innerHTML = image;
+document.getElementById("image_table").appendChild(table);
+}
+
+var arr=[];
+const imgSize=5;
+var cnt = 0;
+const display = (name) => {
+if(arr.length == 0){
+list()
+}
+arr.push(name); //뒤쪽에 추가
+rp2 = document.getElementById("rp2")
+if(arr.length <= imgSize){
+const img=document.createElement('img'); 
+img.src="images/"+name;
+img.id = cnt++
+rp2.appendChild(img)
+}else{
+arr.shift();//앞쪽 값 제거
+for(i=0;i<arr.length;i++){
+document.getElementById(i).src ="images/"+ arr[i]; 
+}
+}
+}
+const list = () => {
+ls = document.getElementById("ls")
+ls.innerHTML="최근 구경한 상품"
+ls.style.background="green"
+}
+</script>
+</head>
+<body>
+<div class="list">
+<h3 class="list_title" id="ls" align="center">
+목록이<br>없습니다
+</h3>
+<div id="rp2"></div>
+</div>
+<div id="image_table"></div>
+</body>
+
+</html>
+

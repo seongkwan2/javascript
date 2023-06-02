@@ -8,24 +8,36 @@
 <script type="text/javascript">
 	const city = ['서울','부산','인천'];
 	const printArr = () =>{
-		for(let i=0; i<city.length; i++){
+		for(let i=0; i<city.length ; i++){
 			document.write(`배열 데이터 ${i} = ${city[i]}<br>`);
 		}
 	}
-	printArr();	//위의 함수  출력
-	city[3] = '대구';	/*데이터 추가가 가능하다.*/
+	printArr();
+	city[3] = '대구';
 	document.write(`<hr>${city}<br>`);
 	
-	const str = city.join("/");	//배열 city의 요소들을 "/"로 구분
+	const str = city.join("/");
 	document.write("str : "+str+"<br>");
 	document.write("str type : "+typeof str+"<br>");
 	document.write("city type : "+typeof city+"<br>");
-	
-	document.write("str.split : "+str.split("/")+"<br>"); //반환값이 배열이라 /는 따로 출력 안됨
-														  //.split(" ")을 입력하면 /가 출력됨
+
+	document.write("str.split : "+str.split("/")+"<br>");
 	document.write("str type : "+typeof str.split("/")+"<br>");
-	
 </script>
-	
+ 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

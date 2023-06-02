@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function test(){
+			//alert("test실행")
+			const fo = document.getElementById("fo");
+			console.log(fo);
+			console.log(fo.pwd1.value);	//부모태그를 가져오면 자식들도 다 사용가능
+			
+			const pwd2 = document.getElementById("pwd2");
+			if(fo.pwd1.value === pwd2.value){
+				alert("비밀번호 일치");
+				fo.submit(); //비밀번호 일치하면 fo의 submit발동 (submit = 다른페이지로 전송)
+			}else{
+				alert("잘못 입력!!!");
+			}
+		}
+	</script>
+
+	<form id = "fo" action="ex30.html">
+		<input type="text" id = "pwd1"><br>
+		<input type="text" id = "pwd2"><br>
+		<input type="button" value="전송" onclick="test()">
+		<!-- submit은 무조건 action의 경로로 보내버림 (보안문제) -->
+		<!-- button은 액션과 무관함 -->
+	</form>
+	
+	<button type = "button" onClick="location.href='ex29.html'">이동</button>
+	<button type = "button" onClick="test1()">이동</button>
+	
+	<script>
+		function test1(){
+			location.href='http://www.naver.com'
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

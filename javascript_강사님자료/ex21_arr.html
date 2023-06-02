@@ -8,37 +8,29 @@
 
 <script type="text/javascript">
 	const data = [111,222,333];
-	
-	//첫번째 방법
-	const printArr= (item,index) =>{//처음 변수는 값 , 두번째 변수는 인덱스번호로 인식
+	function printArr(item, index){
 		document.write(`배열 데이터 ${index} = ${item}<br>`);
 	}
-	data.forEach(printArr);	//data 배열을 printArr타입으로 향상된 for문 출력
-	
+	data.forEach(printArr);
 	
 	document.write(`=== foreach ===<br>`);
-	//두번째 방법 (화살표함수 사용)
 	data.forEach( (item, index) => {
 		document.write(`배열 데이터 ${index} = ${item}<br>`);
 	});
 	
 	document.write(`======<br>`);
 	//const data = [111,222,333];
-	const mapArr = (value) => {//데이터를 받아서 사용하기 위해 매개변수 사용
+	const mapArr = (value) => {
 		return `<b style="color:red;">${value}</b>`;
 	}
 	const mapArr2 = (value) => `<b style="color:blue;">${value}</b>`
 	
 	const mapData = data.map(mapArr);
-				//.map() 메서드는 배열의 각 요소에 동일한 작업을 적용하고, 
-				//그 결과로 새로운 배열을 생성하는데 유용하게 사용
 	
-	
-	//아예 함수자체를 만들어서 변수에 집어넣음
 	const mapData22 = data.map(
 			(value)=>`<b style="color:blue;">${value}</b>`
 		);
-		
+	
 	document.write( mapData );
 	document.write( mapData22 );
 	

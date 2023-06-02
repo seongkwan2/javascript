@@ -3,16 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-	#h3 {color : red;}
-</style>
+
 </head>
 <body>
 <script type="text/javascript">
 
-	//clickEvent 버튼 클릭시 발동
+
 const clickEvent = () =>{
-	//alert("실행??");
 	const name = document.getElementById("name");
 	console.log(name);		//현재페이지의 Id가 name이라는 태그를 얻어온다.
 	name.value = "안녕하세요";
@@ -21,30 +18,18 @@ const clickEvent = () =>{
 	const name2 = document.querySelector("#name2");	//.사용시 클래스도 가져올수있음
 	console.log(name2);
 	
-	name2.value = name.value;
-	name.value = "";
+	name2.value = name.value;	//name칸에 적혀있던 안녕하세요를 name2에도 복사
+	name.value = "";			//name칸은 ""로 비워버림
 }
+
+
 </script>
-
-<script type="text/javascript">
-const innerTest = () => {
-	const txt = document.querySelector(".txt");
-	console.log(txt);
-	let msg = "<h3 id='h3'>내용 바꾸기</h3>";
-	txt.innerHTML = msg;
-	
-}
-</script>
-
-<label class = "txt">텍스트 값</label><br>
-<span onclick="innerTest()">클릭</span>
-
-<hr>
 
 <input type="text" id="name" placeholder="input name"><br>
 <input type="text" id="name2" placeholder="input name2"><br>
 <input type="button" value="버튼" onclick="clickEvent()"><br>
-
+							<!-- onclick = 버튼클릭시 적혀있는 메서드 실행 -->
 
 </body>
 </html>
+

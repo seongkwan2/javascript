@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function myFocus(){
+		document.getElementById("pwd").focus();
+		
+		const txt = document.getElementById("txt");
+		document.getElementById("copy").value = txt.value;
+		//값을 txt에 입력하고 클릭을 누르면 copy쪽에서 복사가 됨
+	}
+	const test = (t) => {
+		console.log(document.getElementById("txt"));
+		console.log(t);
+		document.getElementById("copy").value = t.value;
+	}
+	
+	</script>						<!--oninput 키가 입력 될 때마다 발동-->
+	<input type = "text" id = "txt" oninput="test(this)"><br>
+	<input type = "text" id = "pwd"><br>
+	<input type = "text" id = "copy"><br>
+	<input type = "button" onclick="myFocus()" value="클릭"><br>
+</body>
+</html>

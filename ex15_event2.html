@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	#h3 {color : red;}
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+const innerTest = () => {
+	const txt = document.querySelector(".txt");
+	console.log(txt);
+	let msg = "<h3 id='h3'>내용 바꾸기</h3>";
+	txt.innerHTML = msg;
+	//msg의 내용으로 txt를 업데이트 시킨다.
+	
+}
+</script>
+
+<label class = "txt">텍스트 값</label><br>
+<span onclick="innerTest()">클릭</span>
+<p>
+<hr>
+
+</body>
+</html>

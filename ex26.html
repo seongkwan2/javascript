@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	var img;
+	function add(){
+		img = document.createElement("img");	//img라는 태그를 생성
+		img.src = "images/test1.jpg";
+		img.width = 100
+		img.style.height="100px";
+		//img.setAttribute("width",100);
+		//img.setAttribute("height",100);
+		//img.setAttribute("src","이미지 경로");
+		document.getElementById("test").appendChild(img);
+		//document.getElementById("test").innerHTML = img;
+		//.innerHTML는 내용이 바뀌고 끝	.appendChild는 내용이 계속 추가됨
+	}
+	const remove = () =>{
+		let items = document.querySelector("#test");
+		console.log(items.childNodes);
+		items.removeChild(items.childNodes)
+		//document.querySelector("img").remove();
+		//querySelector("#test")를삭제를 하게되면 
+		//아래의 <p id="test"></p> 태그가 삭제되어버림 (삭제후 다시 추가가 안됨)
+		
+	}
+</script>
+<p id="test"></p>
+	<b>aaa</b>
+	<span>bbb</span>
+<a href="#" onclick="add()">[이미지 추가]</a>
+<a href="#" onclick="remove()">[이미지 삭제]</a>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
